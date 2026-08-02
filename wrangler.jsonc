@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jichitai-code",
+  "main": "src/worker.tsx",
+  "compatibility_date": "2026-07-29",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "jichitai-code.yhay81.com",
+      "custom_domain": true,
+    },
+  ],
+  "triggers": { "crons": ["21 21 * * *"] },
+  "observability": { "enabled": true },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jichitai-code",
+      "database_id": "b8f4933f-04a7-4948-8c0f-c2eba613e20c",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+}

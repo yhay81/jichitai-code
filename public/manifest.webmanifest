@@ -1,0 +1,10 @@
+{
+  "name": "自治体コード引き",
+  "short_name": "自治体コード引き",
+  "description": "自治体名・カナ・5桁・6桁から全国地方公共団体コードを探す",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e7",
+  "theme_color": "#18334a",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

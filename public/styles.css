@@ -1,0 +1,1017 @@
+:root {
+  --ink: #18334a;
+  --ink-soft: #3d5569;
+  --paper: #f4f0e7;
+  --white: #fffdf8;
+  --line: #c8c1b2;
+  --blue: #1e5a78;
+  --blue-pale: #d9e8ed;
+  --red: #b84935;
+  --red-pale: #f0d8d0;
+  --ochre: #c59a3d;
+  --shadow: 0 12px 32px rgb(24 51 74 / 9%);
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+}
+button,
+input {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  color: inherit;
+}
+a {
+  color: var(--blue);
+  text-underline-offset: 3px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--ochre);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 20;
+  top: 8px;
+  left: 8px;
+  padding: 8px 12px;
+  color: white;
+  background: var(--ink);
+  transform: translateY(-150%);
+}
+.skip-link:focus {
+  transform: none;
+}
+
+.site-header,
+.site-footer,
+.home,
+.content-page {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+  border-bottom: 1px solid var(--line);
+}
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+.code-mark {
+  display: grid;
+  grid-template-columns: 20px 28px 14px;
+  gap: 2px;
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+}
+.code-mark i {
+  display: grid;
+  place-items: center;
+  height: 25px;
+  border: 1px solid var(--ink);
+  font-size: 0.64rem;
+  font-style: normal;
+}
+.code-mark i:last-child {
+  color: var(--white);
+  background: var(--red);
+  border-color: var(--red);
+}
+.site-header nav,
+.site-footer span:last-child {
+  display: flex;
+  gap: 18px;
+}
+.site-header nav a {
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.site-header nav a:hover {
+  color: var(--red);
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  align-items: center;
+  gap: 60px;
+  min-height: 470px;
+  padding: 55px 0 48px;
+}
+.eyebrow,
+.section-heading p,
+.result-heading p,
+.code-tray header p,
+.content-heading p {
+  margin: 0 0 7px;
+  color: var(--red);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+.product-heading h1 {
+  max-width: 520px;
+  margin: 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  line-height: 1.24;
+  letter-spacing: 0.02em;
+}
+.product-heading > p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 20px 0 0;
+  color: var(--ink-soft);
+  line-height: 1.9;
+}
+.directory-facts {
+  display: flex;
+  margin-top: 34px;
+}
+.directory-facts span {
+  min-width: 112px;
+  padding-right: 24px;
+}
+.directory-facts span + span {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+.directory-facts strong,
+.directory-facts small {
+  display: block;
+}
+.directory-facts strong {
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: 1.38rem;
+}
+.directory-facts small {
+  margin-top: 3px;
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+}
+
+.code-landscape {
+  position: relative;
+  min-height: 340px;
+  padding: 28px;
+  background: #e5ecec;
+  border: 1px solid #b5c5c8;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.code-landscape::before,
+.code-landscape::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgb(30 90 120 / 20%);
+}
+.code-landscape::before {
+  inset: 14px;
+}
+.code-landscape::after {
+  right: -30px;
+  bottom: 78px;
+  width: 280px;
+  height: 1px;
+  border-width: 1px 0 0;
+  transform: rotate(-8deg);
+}
+.map-blocks {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 35px);
+  gap: 5px;
+  width: 92%;
+  margin: 0 auto 30px;
+  transform: rotate(-2deg);
+}
+.map-blocks span {
+  display: grid;
+  place-items: center;
+  color: var(--ink);
+  background: var(--white);
+  border: 1px solid #9fb6bd;
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: 0.62rem;
+  font-weight: 800;
+  box-shadow: 3px 3px 0 rgb(30 90 120 / 10%);
+}
+.map-hokkaido {
+  grid-column: 8 / 11;
+  grid-row: 1;
+}
+.map-tohoku {
+  grid-column: 7 / 9;
+  grid-row: 2;
+}
+.map-kanto {
+  grid-column: 7 / 10;
+  grid-row: 3;
+}
+.map-chubu {
+  grid-column: 5 / 7;
+  grid-row: 3;
+}
+.map-kinki {
+  grid-column: 4 / 6;
+  grid-row: 4;
+}
+.map-chugoku {
+  grid-column: 2 / 4;
+  grid-row: 4;
+}
+.map-shikoku {
+  grid-column: 3 / 5;
+  grid-row: 5;
+}
+.map-kyushu {
+  grid-column: 1 / 3;
+  grid-row: 5;
+}
+.code-plate,
+.code-anatomy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr 9px 0.55fr;
+  gap: 4px;
+  width: min(390px, 100%);
+  margin-left: auto;
+  padding: 7px;
+  background: var(--ink);
+  box-shadow: 8px 8px 0 rgb(24 51 74 / 14%);
+}
+.code-plate span,
+.code-anatomy span {
+  display: grid;
+  align-content: center;
+  min-height: 72px;
+  padding: 6px 10px;
+  color: var(--ink);
+  background: var(--white);
+}
+.code-plate small,
+.code-anatomy small {
+  color: var(--ink-soft);
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+.code-plate b,
+.code-anatomy b {
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+}
+.code-plate > i,
+.code-anatomy > i {
+  display: block;
+  background: var(--paper);
+}
+.code-plate .check-digit {
+  color: var(--white);
+  background: var(--red);
+}
+.code-plate .check-digit small {
+  color: var(--red-pale);
+}
+
+.version-ribbon {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 24px;
+  padding: 11px 15px;
+  color: var(--white);
+  background: var(--ink);
+  font-size: 0.74rem;
+}
+.version-ribbon strong {
+  color: #f1d684;
+}
+.version-ribbon span {
+  opacity: 0.8;
+}
+.version-ribbon a {
+  color: var(--white);
+  font-weight: 800;
+}
+
+.search-desk,
+.prefecture-board,
+.municipality-results,
+.code-tray {
+  background: var(--white);
+  border: 1px solid var(--line);
+  box-shadow: 0 7px 20px rgb(24 51 74 / 5%);
+}
+.search-desk,
+.prefecture-board {
+  margin-top: 18px;
+  padding: 26px 28px;
+}
+.section-heading,
+.result-heading,
+.code-tray > header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+.section-heading h2,
+.result-heading h2,
+.code-tray h2 {
+  margin: 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.35rem;
+}
+.section-heading output,
+.result-heading output,
+.code-tray output {
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.section-heading > button {
+  padding: 7px 10px;
+  background: transparent;
+  border: 1px solid var(--line);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.municipality-search {
+  display: grid;
+  gap: 7px;
+  margin-top: 22px;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+.search-box {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  align-items: center;
+  border: 2px solid var(--ink);
+  background: var(--white);
+}
+.search-box i {
+  text-align: center;
+  font-family: serif;
+  font-size: 1.5rem;
+  font-style: normal;
+}
+.search-box input {
+  min-width: 0;
+  padding: 13px 8px;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+.search-box input::placeholder {
+  color: #7c8b94;
+}
+.search-box button {
+  align-self: stretch;
+  padding: 0 15px;
+  background: var(--paper);
+  border: 0;
+  border-left: 1px solid var(--line);
+  cursor: pointer;
+}
+.type-filter {
+  margin: 18px 0 0;
+  padding: 0;
+  border: 0;
+}
+.type-filter legend {
+  margin-bottom: 7px;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+.type-filter div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.type-filter button,
+.region-row button {
+  padding: 7px 12px;
+  background: transparent;
+  border: 1px solid var(--line);
+  font-size: 0.76rem;
+  cursor: pointer;
+}
+.type-filter button[aria-pressed="true"] {
+  color: var(--white);
+  background: var(--blue);
+  border-color: var(--blue);
+}
+.privacy-note {
+  margin: 13px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.67rem;
+}
+
+.region-grid {
+  display: grid;
+  gap: 1px;
+  margin-top: 20px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.region-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: stretch;
+  background: var(--white);
+}
+.region-row h3 {
+  display: grid;
+  align-items: center;
+  margin: 0;
+  padding: 8px 12px;
+  color: var(--ink-soft);
+  background: #e9e4d9;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+.region-row div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 7px;
+}
+.region-row button {
+  min-width: 44px;
+  padding: 6px 9px;
+  background: var(--white);
+  border-color: transparent;
+}
+.region-row button:hover {
+  border-color: var(--blue);
+}
+.region-row button[aria-pressed="true"] {
+  color: var(--white);
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.result-and-tray {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 315px;
+  align-items: start;
+  gap: 18px;
+  margin: 18px 0 56px;
+}
+.municipality-results,
+.code-tray {
+  padding: 25px 28px;
+}
+#search-status {
+  margin: 16px 0 10px;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+}
+.municipality-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.municipality-card {
+  position: relative;
+  min-width: 0;
+  padding: 16px;
+  background: #fbfaf6;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue);
+}
+.municipality-card h3 {
+  margin: 14px 0 2px;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: 1.12rem;
+}
+.municipality-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.result-code-plate {
+  display: grid;
+  grid-template-columns: auto 5px auto;
+  align-items: stretch;
+  color: var(--white);
+  background: var(--ink);
+}
+.result-code-plate code {
+  padding: 5px 7px;
+  color: inherit;
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+.result-code-plate .code-check {
+  background: var(--red);
+}
+.code-divider {
+  background: var(--paper);
+}
+.type-badge {
+  color: var(--blue);
+  font-size: 0.62rem;
+  font-weight: 900;
+  text-align: right;
+}
+.municipality-location,
+.municipality-kana {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.7rem;
+}
+.municipality-kana {
+  min-height: 1.3em;
+  margin-top: 3px;
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+}
+.territory-note {
+  margin: 9px 0 0;
+  padding: 6px 8px;
+  color: #6b2c21;
+  background: var(--red-pale);
+  font-size: 0.65rem;
+  font-weight: 800;
+}
+.card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-top: 13px;
+}
+.card-actions button,
+.official-link {
+  display: grid;
+  place-items: center;
+  min-height: 31px;
+  padding: 5px 7px;
+  border: 1px solid var(--ink);
+  font-size: 0.66rem;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: none;
+}
+.copy-button {
+  color: var(--white);
+  background: var(--ink);
+}
+.copy-button.secondary {
+  color: var(--ink);
+  background: transparent;
+}
+.save-button {
+  color: var(--blue);
+  background: var(--blue-pale);
+  border-color: #9ebbc5 !important;
+}
+.save-button.is-saved {
+  color: var(--white);
+  background: var(--blue);
+}
+.official-link {
+  color: var(--red);
+  border-color: #d1a095;
+}
+.load-more {
+  display: block;
+  width: 100%;
+  margin-top: 13px;
+  padding: 11px;
+  color: var(--white);
+  background: var(--blue);
+  border: 0;
+  font-weight: 800;
+  cursor: pointer;
+}
+.loading-note,
+.empty-result {
+  grid-column: 1 / -1;
+  padding: 35px 20px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  text-align: center;
+}
+.empty-result p {
+  margin: 7px auto 15px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.reset-button {
+  padding: 7px 12px;
+  background: var(--white);
+  border: 1px solid var(--ink);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.code-tray {
+  position: sticky;
+  top: 12px;
+  border-top: 4px solid var(--red);
+}
+#saved-items {
+  display: grid;
+  gap: 1px;
+  margin-top: 17px;
+  background: var(--line);
+}
+.empty-tray {
+  margin: 0;
+  padding: 20px 14px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  font-size: 0.74rem;
+  line-height: 1.7;
+}
+.saved-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px 10px;
+  background: var(--white);
+}
+.saved-row span,
+.saved-row strong,
+.saved-row small {
+  display: block;
+  min-width: 0;
+}
+.saved-row strong {
+  overflow: hidden;
+  font-size: 0.76rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.saved-row small {
+  margin-top: 2px;
+  color: var(--ink-soft);
+  font-family: ui-monospace, "Cascadia Mono", monospace;
+  font-size: 0.6rem;
+}
+.remove-saved {
+  padding: 4px 6px;
+  background: transparent;
+  border: 0;
+  color: var(--red);
+  font-size: 0.65rem;
+  cursor: pointer;
+}
+.saved-actions {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+}
+.saved-actions button {
+  padding: 9px;
+  color: var(--white);
+  background: var(--red);
+  border: 1px solid var(--red);
+  font-size: 0.72rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.saved-actions .clear-button {
+  color: var(--ink-soft);
+  background: transparent;
+  border-color: var(--line);
+}
+.saved-actions button:disabled {
+  cursor: default;
+  opacity: 0.42;
+}
+
+.content-page {
+  min-height: calc(100vh - 155px);
+  padding: 48px 0 62px;
+}
+.content-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 27px;
+}
+.page-index {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  color: var(--white);
+  background: var(--red);
+  font-family: "Yu Mincho", serif;
+  font-size: 1.35rem;
+}
+.content-heading h1 {
+  margin: 0;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  font-size: clamp(1.55rem, 3.2vw, 2.25rem);
+}
+.instruction-grid,
+.source-grid,
+.privacy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.source-grid,
+.privacy-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+.instruction-grid section,
+.source-grid section,
+.privacy-grid section {
+  padding: 23px;
+  background: var(--white);
+}
+.instruction-grid section > b {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  color: var(--white);
+  background: var(--blue);
+  font-family: "Yu Mincho", serif;
+}
+.instruction-grid h2,
+.source-grid h2,
+.privacy-grid h2 {
+  margin: 13px 0 7px;
+  font-size: 0.93rem;
+}
+.source-grid h2,
+.privacy-grid h2 {
+  margin-top: 0;
+}
+.instruction-grid p,
+.source-grid p,
+.privacy-grid p,
+.care-note p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  line-height: 1.85;
+}
+.code-anatomy {
+  width: min(600px, 100%);
+  margin: 25px auto;
+}
+.code-anatomy span {
+  min-height: 84px;
+}
+.code-anatomy span:last-child {
+  color: var(--white);
+  background: var(--red);
+}
+.code-anatomy span:last-child small {
+  color: var(--red-pale);
+}
+.care-note {
+  margin-top: 22px;
+  padding: 18px 20px;
+  background: #e5ecec;
+  border-left: 4px solid var(--blue);
+}
+.care-note strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.83rem;
+}
+.page-cta {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 10px 16px;
+  color: var(--white);
+  background: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.source-ledger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 22px 0 0;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.source-ledger div {
+  min-width: 0;
+  padding: 13px;
+  background: var(--white);
+}
+.source-ledger div:last-child {
+  grid-column: 1 / -1;
+}
+.source-ledger dt {
+  color: var(--ink-soft);
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+.source-ledger dd {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+}
+.source-ledger code {
+  overflow-wrap: anywhere;
+  font-size: 0.68rem;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 80px;
+  padding: 22px 0;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  font-size: 0.67rem;
+}
+.site-footer a {
+  color: var(--ink-soft);
+}
+.not-found {
+  display: grid;
+  justify-items: center;
+  min-height: calc(100vh - 155px);
+  padding: 80px 20px;
+  text-align: center;
+}
+.not-found > span {
+  color: var(--red);
+  font-family: ui-monospace, monospace;
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.not-found h1 {
+  margin: 8px 0;
+  font-family: "Yu Mincho", serif;
+  font-size: 1.7rem;
+}
+.not-found p {
+  color: var(--ink-soft);
+}
+.not-found a {
+  padding: 9px 14px;
+  color: var(--white);
+  background: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 920px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    min-height: 0;
+  }
+  .code-landscape {
+    min-height: 320px;
+  }
+  .result-and-tray {
+    grid-template-columns: 1fr;
+  }
+  .code-tray {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header,
+  .site-footer,
+  .home,
+  .content-page {
+    width: min(100% - 22px, 1180px);
+  }
+  .site-header {
+    align-items: flex-start;
+    min-height: 90px;
+    padding: 14px 0;
+  }
+  .site-header nav {
+    display: grid;
+    gap: 2px;
+    justify-items: end;
+  }
+  .intro {
+    padding: 34px 0 28px;
+  }
+  .product-heading h1 {
+    font-size: 2rem;
+  }
+  .directory-facts span {
+    min-width: 0;
+    flex: 1;
+    padding-right: 10px;
+  }
+  .directory-facts span + span {
+    padding-left: 10px;
+  }
+  .directory-facts strong {
+    font-size: 1.05rem;
+  }
+  .code-landscape {
+    min-height: 290px;
+    padding: 20px 14px;
+  }
+  .map-blocks {
+    width: 100%;
+    grid-template-rows: repeat(5, 31px);
+  }
+  .code-plate b,
+  .code-anatomy b {
+    font-size: 1.45rem;
+  }
+  .code-plate span,
+  .code-anatomy span {
+    min-height: 64px;
+    padding: 5px 7px;
+  }
+  .version-ribbon {
+    grid-template-columns: 1fr auto;
+    gap: 5px 12px;
+  }
+  .version-ribbon span {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .search-desk,
+  .prefecture-board,
+  .municipality-results,
+  .code-tray {
+    padding: 18px;
+  }
+  .region-row {
+    grid-template-columns: 70px 1fr;
+  }
+  .municipality-list {
+    grid-template-columns: 1fr;
+  }
+  .instruction-grid,
+  .source-grid,
+  .privacy-grid,
+  .source-ledger {
+    grid-template-columns: 1fr;
+  }
+  .source-ledger div:last-child {
+    grid-column: auto;
+  }
+  .site-footer {
+    display: grid;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

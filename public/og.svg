@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f4f0e7"/>
+  <rect x="38" y="38" width="1124" height="554" fill="none" stroke="#c8c1b2" stroke-width="2"/>
+  <g transform="translate(680 74) rotate(-2)">
+    <g fill="#fffdf8" stroke="#9fb6bd" stroke-width="2">
+      <rect x="318" y="0" width="132" height="48"/><rect x="270" y="60" width="105" height="48"/>
+      <rect x="264" y="120" width="144" height="48"/><rect x="174" y="120" width="78" height="48"/>
+      <rect x="126" y="180" width="96" height="48"/><rect x="18" y="180" width="96" height="48"/>
+      <rect x="78" y="240" width="96" height="48"/><rect x="-36" y="240" width="102" height="48"/>
+    </g>
+    <g fill="#18334a" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle">
+      <text x="384" y="30">01</text><text x="322" y="90">02–07</text><text x="336" y="150">08–14</text>
+      <text x="213" y="150">15–24</text><text x="174" y="210">25–30</text><text x="66" y="210">31–35</text>
+      <text x="126" y="270">36–39</text><text x="15" y="270">40–47</text>
+    </g>
+  </g>
+  <g transform="translate(74 84)">
+    <text y="0" fill="#b84935" font-family="sans-serif" font-size="18" font-weight="800" letter-spacing="3">LOCAL GOVERNMENT CODE DIRECTORY</text>
+    <text y="70" fill="#18334a" font-family="serif" font-size="48" font-weight="700">地域を選ぶ。</text>
+    <text y="132" fill="#18334a" font-family="serif" font-size="48" font-weight="700">6桁がそろう。</text>
+    <text y="184" fill="#3d5569" font-family="sans-serif" font-size="21">自治体名・カナ・コードから、全国1,965件を検索</text>
+  </g>
+  <g transform="translate(74 362)">
+    <rect width="470" height="140" fill="#18334a"/>
+    <rect x="12" y="12" width="130" height="116" fill="#fffdf8"/>
+    <rect x="148" y="12" width="190" height="116" fill="#fffdf8"/>
+    <rect x="344" y="12" width="114" height="116" fill="#b84935"/>
+    <g font-family="sans-serif" font-size="13" font-weight="700">
+      <text x="27" y="39" fill="#3d5569">都道府県</text><text x="163" y="39" fill="#3d5569">市区町村</text><text x="359" y="39" fill="#f0d8d0">検査数字</text>
+    </g>
+    <g font-family="ui-monospace, monospace" font-size="48" font-weight="800" letter-spacing="5">
+      <text x="27" y="97" fill="#18334a">13</text><text x="163" y="97" fill="#18334a">101</text><text x="379" y="97" fill="#fffdf8">6</text>
+    </g>
+  </g>
+  <g transform="translate(680 426)" font-family="sans-serif">
+    <rect width="430" height="76" fill="#e5ecec" stroke="#9fb6bd" stroke-width="2"/>
+    <text x="24" y="31" fill="#1e5a78" font-size="17" font-weight="800">5桁本体と末尾の検査数字を分けて確認</text>
+    <text x="24" y="55" fill="#3d5569" font-size="15">総務省「全国地方公共団体コード」を加工して作成</text>
+  </g>
+  <text x="1120" y="558" fill="#18334a" font-family="sans-serif" font-size="17" font-weight="800" text-anchor="end">自治体コード引き</text>
+</svg>
